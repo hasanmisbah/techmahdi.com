@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  padding: 10px;
+  background-color: yellow;
+  color: black;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+
+section {
+  padding-left: 220px;
+  height: 100%;
+}
+
+.page-title {
+  padding: 60px 70px;
+
+  h1 {
+    font-family: "Kaushan Script", sans-serif;
+    font-weight: bold;
+    position: relative;
+    font-size: 42px;
+    color: #1e1e1e;
+    z-index: 2;
+
+    &::before {
+
+      position: absolute;
+      color: #efefef;
+      text-transform: uppercase;
+      left: -5px;
+      top: 12px;
+      z-index: -1;
+    }
+  }
+}
+
+
+
+.page-enter-active {
+  transition: all .3s ease;
+}
+
+.page-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.page-enter,
+.page-leave-to {
+  transform: translateX(1px);
+  opacity: 0;
+}
